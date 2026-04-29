@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastro de Alunos"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Nome -->
+    <EditText
+        android:id="@+id/editCadastro"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Digite o nome do aluno"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:inputType="textPersonName"
+        />
+
+    <!-- Turma -->
+    <TextView
+        android:id="@+id/textTurma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecione a Turma:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#444"
+        app:layout_constraintTop_toBottomOf="@id/editCadastro"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spinnerTurma"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/edit_text"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/textTurma"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Notas -->
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digite as Notas:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#444"
+        app:layout_constraintTop_toBottomOf="@id/spinnerTurma"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/editNotasMultiline"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:hint="Ex: 8.5, 7.0, 9.2"
+        android:gravity="start|top"
+        android:inputType="numberDecimal"
+        android:digits="0123456789., "
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        app:layout_constraintTop_toBottomOf="@id/textView1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Presença -->
+    <CheckBox
+        android:id="@+id/checkPresenca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Presença"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        app:layout_constraintTop_toBottomOf="@id/editNotasMultiline"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <!-- Falta -->
+    <CheckBox
+        android:id="@+id/checkFalta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Falta"
+        android:textStyle="bold"
+        android:textColor="#C62828"
+        app:layout_constraintTop_toBottomOf="@id/checkPresenca"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp" />
+
+    <!-- Botão -->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="ENVIAR"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#3F51B5"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/checkFalta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:id="@+id/textRelatorio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Relatório da Turma:"
+        android:textSize="14sp"
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
