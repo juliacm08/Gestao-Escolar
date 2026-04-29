@@ -1,9 +1,0 @@
-baseada em java, usa até os msm framewoks sem precisar usar api
-usa o JVM -> uma maquina virtual é gerada em qualquer so -> é interpretada facilmente
-interpreta tudo como string -> converter
-é possível converter direto da leitura => readLine().toInt()
-O uso de !! não é obrogatório mas é uma garantia de segurança
-print("ola $nome sua idade é $idade)
-no kotlin da pra usar função no when, nn somemte print
-
-
